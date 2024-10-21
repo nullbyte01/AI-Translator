@@ -76,8 +76,8 @@
   };
 </script>
 
-<div class="flex justify-between w-full items-center">
-  <div class="flex flex-col w-[45%]">
+<div class="flex flex-col md:flex-row justify-between w-full items-start md:items-center">
+  <div class="flex flex-col w-full md:w-[45%] mb-4 md:mb-0">
     <label for="from-language">Translate from:</label>
     <select
       class="mb-2 p-2 text-sm rounded border border-gray-300"
@@ -90,9 +90,7 @@
         {/each}
       {/if}
     </select>
-    <div
-      class="w-full h-auto p-1 border-2 border-gray-300 rounded-lg box-border bg-white"
-    >
+    <div class="w-full h-auto p-1 border-2 border-gray-300 rounded-lg box-border bg-white">
       <textarea
         class="w-full h-[30vh] border-0 resize-none outline-none p-1 rounded-lg box-border text-base"
         rows="4"
@@ -102,18 +100,21 @@
       />
     </div>
   </div>
-  <div class="flex items-center justify-center p-5">
+
+  <div class="flex items-center justify-center md:p-5 mb-4 md:mb-0 w-full md:w-auto">
     <button
-      class="px-5 py-2.5 text-base rounded border-0 bg-blue-500 text-white cursor-pointer hover:bg-blue-700"
-      on:click={onTranslateClicked}>Translate</button
+      class="px-5 py-2.5 text-base rounded border-0 bg-blue-500 text-white cursor-pointer hover:bg-blue-700 mx-auto"
+      on:click={onTranslateClicked}
     >
+      Translate
+    </button>
   </div>
 
-  <div class="flex flex-col w-[45%]">
-    <label for="from-language">Translate from:</label>
+  <div class="flex flex-col w-full md:w-[45%]">
+    <label for="to-language">Translate to:</label>
     <select
       class="mb-2 p-2 text-sm rounded border border-gray-300"
-      name="from-language"
+      name="to-language"
       bind:value={defaultTranslationTo}
     >
       {#if translationTo}
@@ -122,9 +123,7 @@
         {/each}
       {/if}
     </select>
-    <div
-      class="w-full h-auto p-1 border-2 border-gray-300 rounded-lg box-border bg-white"
-    >
+    <div class="w-full h-auto p-1 border-2 border-gray-300 rounded-lg box-border bg-white">
       <textarea
         class="w-full h-[30vh] border-0 resize-none outline-none p-1 rounded-lg box-border text-base"
         rows="4"
