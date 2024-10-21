@@ -21,4 +21,4 @@ A GenAI based translator built using Google Gemini API and Svelte
 - [ ] Creating a reusable components for translation selection and text area
 - [ ] Adding a speech-to-text for translation input as well as text-to-speech for translation output
  
-Want to see this in action? [click here]()
+Want to see this in action? [click here](https://ai-powered-translator.netlify.app/)
